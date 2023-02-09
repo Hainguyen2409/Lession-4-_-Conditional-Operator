@@ -12,10 +12,26 @@
 </html>
 
 <script>
-    let value = prompt('What is the "Official" name of javascript', '');
-    if (value == "ECMAScript") {
-        alert ("Right!");
-    } else {
-        alert ("ECMAScript! Didn't know?");
-    }
+ 
+    // let value = prompt('What is the "Official" name of javascript', '');
+    // if (value == "ECMAScript") {
+    //     alert ("Right!");
+    // } else {
+    //     alert ("ECMAScript! Didn't know?");
+    // } BT .1
+
+    // let A = Number(prompt("a: "));
+    // let B = Number(prompt("b: "));
+    // Result = (A + B < 4) ? 'Below': 'Over';
+    // alert ("Kết quả: " + Result); BT. 2
+
+    let loggin = prompt("");
+    let message = (loggin =='Employee')?
+        "hello" :
+        (loggin =='Director')?
+        "Greeting" :
+        (loggin == "")?
+        "No loggin" :
+        "";
+    alert(message);
 </script>

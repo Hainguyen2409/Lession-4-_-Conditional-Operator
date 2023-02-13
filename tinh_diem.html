@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính Điểm Đại Học Khối D</h1>
+    <table>
+        <tr>
+            <td>
+                <th>Môn Toán: </th>
+            </td>
+            <td>
+                <input type="text" id="maths">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <th>Môn Văn: </th>
+            </td>
+            <td>
+                <input type="text" id="literals">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <th>Môn Anh: </th>
+            </td>
+            <td>
+                <input type="text" id="englishs">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <th>Khu Vực: </th>
+            </td>
+            <td>
+                <select name="" id="area">
+                <option value="KV1">KV1</option>
+                    <option value="KV2">KV2</option>
+                    <option value="KV2-NT">KV2-NT</option>
+                    <option value="KV3">KV3</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button type="button" onclick="tinh_Diem()">Tính Điểm</button>
+    <p id="grade"></p>
+</body>
+</html>
+<script>
+    function tinh_Diem(){
+        let Maths = Number(document.getElementById("maths").value);
+        let Literals = Number(document.getElementById("literals").value);
+        let Englishs = Number(document.getElementById("englishs").value);
+        let Sum = Maths + Literals + Englishs;
+        let Area = document.getElementById("area").value;
+        switch(Area) {
+            case "KV1":
+                document.getElementById("grade").innerHTML = "Tổng Điểm Đại Học Khối D Của Bạn Là: " + (Sum + 0.75);
+                break;
+            case "KV2":
+                document.getElementById("grade").innerHTML = "Tổng Điểm Đại Học Khối D Của Bạn Là: " + (Sum + 0.5);
+                break;
+            case "KV2-NT":
+                document.getElementById("grade").innerHTML = "Tổng Điểm Đại Học Khối D Của Bạn Là: " + (Sum + 0.25);
+                break;
+            case "KV3":
+                document.getElementById("grade").innerHTML = "Tổng Điểm Đại Học Khối D Của Bạn Là: " + Sum ;
+                break;
+        }
+    }
+</script>
